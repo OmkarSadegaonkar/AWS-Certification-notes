@@ -1,0 +1,143 @@
+1. S3 - static block storage, object storage, access publicly, upload files, 0B to 5 TB, in buckets, universal namespace, not for OS
+	KEY - name of object
+	Value - data
+	new object read straight aways
+	update or delete object- some delay
+	Buckets globally view but can create regionally
+	cross region replication is allowed
+	usually uploaded in edge locations then via backbone location
+	scales automatically to meet demand
+	6 Types - 
+		1) Standard - 99.99% availability
+		2) Infrequently access - lower fee than S3 - less frequently accessed but rapid
+		3) One zone - IA - lower cost option for infrequently accessed data
+		4) Intelligence tiering - ML
+		5) Glacier - retrieval configurable mins to hours
+		6) Glacier deep archieve - retrieval time of 12 hours - lowest cost
+
+2. DMS - Database migration service
+3. 6 Advantages of Cloud
+	1) Trade capital expense for variable expense
+	2) massive economic scale
+	3) stop guessing capacity
+	4) increae speed and agility
+	5) stop spending money on data centers
+	6) global in minutes
+4. 3 Types of cloud computing
+	1) Infra as a service (IAAS) - EC2
+	2) Platform as a service (PAAS) - Elasctic Beanstalk
+	3) Software as a service (SAAS)
+5. 3 types of clouds
+	1) Public
+	2) Hybrid
+	3) Private
+6. Region - Physical grographical location with at least 2 AZ
+7. AZ - one or more discrete data centers with redundant power, networking and connectivity
+	in separate facilities
+8. Edge locations - endpoints for AWS, caching content, has amazon cloudfront, CDN
+	Content will be cached, separate to AWS region or AZ, 
+9. Choose AWS region
+	1) Data sovereignty laws
+	2) Latency
+	3) AWS services
+10. Support packages
+	1) Basic - free
+	2) Developer - $29 pm
+	3) Business - $100 pm
+	4) Enterprise - $15000 pm - TAM
+11. Billing alerts/alarms - to notify is exceeded certain limit
+12. IAM - Global - principle of least privilege
+13. Access AWS platform in 3 ways
+	1) Console
+	2) CLI
+	3) Software Development Kit
+14. Root account - email account while creation of AWS account. Never give to anyone
+	create users and give details to them.
+15. Group - place to store users
+16. Policy - JSON to give access to groups
+17. Origin - is origin of all files that CDN will distribute. S3/ EC2/ Elastic Load Balancer/ Route 53 
+18. Distribution - CDN network - collection of Edge locations
+	2 types
+		1) Web distribution
+		2) RTMP - for media streaming
+19. EC2 - web service - provide resizable compute capacity - not serverless - its a server
+	reduces time required to obtain and boot new server instance to minutes
+	Pricing models
+		1) On demand
+		2) Reserved
+		3) Spot - if terminated by EC2 not charged
+		4) Dedicated hosts - physical
+	EC2 Types - FIGHT DR MCPXZ AU
+	Linux 22, Microsoft RDP 3389, Http 80, Https 443
+20. EBS - 
+	1) SSD - GP2, IO1
+	2) Magnetic - ST1, SC1
+21. Always design for failure
+22. Load balancers
+	1) Application LB - Layer 7 - intelligent decisions
+	2) Network LB - extreme performance, static IP addressed
+	3) Classic LB - low cost - for dev, test
+23. RDS (SQL, OLTP) - Multiple AZ, Read replicas
+24. Dynamo DB - NOSQL
+25. Redshift OLAP - huge data
+26. Elasticache - memcached & reds
+27. Graph DB- Amazon Neptchune
+28. DNS - Route 53 - global
+29. Elastic Beanstalk - upload code, no worry about infra - both free - limited and not programmable
+30. AWS cloud formation - helps to model and setup AWS resources so spend less, create template JSON - programmable and bigger
+31. Global services - IAM, Route53, Cloudfront, SNS, SNS
+32. On premises - Snowball, snowball edge, storage gateway, codedeploy, opsworks, IOT greengrass
+33. Cloudwatch - monitor perofrmance, every 5 min by default, 1 min interval, all about performance
+34. AWS systems manager - on each VM and EC2
+35. EBS - Virtual hard disk in the cloud
+36. File gateway - supports file interface - store in S3
+37. EMR - process large data efficiently
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Capex - capital expenditure - upfront pay - fixed, sunk cost
+2. Opex - operational expenditure - pay as you go - utility billing
+3. Free services - VPC, Elastic Beanstalk, Cloudformation, IAM, Auto scaling, Opsworks, Consolidated billing
+4. Budgets - before costs incurred
+5. Costs exporer - after expenditure
+6. Tags - key value pairs, metadata, inherited
+7. Consolidated billing - Apply Policy - Organizational units, Roots level
+8. No deploy anything in paying account; 20 linked accounts;
+9. CloudTrail - for auditing, per aws account, per region, turn on in paying account
+10. Quick start - using CloudFormation templates - per account basis
+11. Landing zone - setup multi account
+12. Simply monthly calculator - running cost , not comparison tool
+13. AWS TCO calculator - comparison tool, reports
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+1. AWS Artifact - to retrieve compliance reports
+2. CUSTOMER - in the cloud - OS, network and firewall, customer data, nw traffic protection, server side encryption, client side encryption
+3. AWS - of the cloud - regions, AZ, edge locations, compute, storage, db, networking, softwares
+4. WAF - web application firewall at layer 7
+5. Shield - DDOS attack
+6. Inspector - scan of EC2 instances, asses, for exposure, vulnerabilities, deviation from best practices - produces detailed report
+7. Trusted advisor - inspect AWS account + cost optimization, performance, fault tolerance
+8. CloudTrail - increases visiblity
+9. Athena - interactive query service - std SQL, analyse log data in S3
+10. Macie - AI to analyze data in s3, dashboards, reports, alerting, great for PCI-DSS
+11. AWS Personal health dashboard - alert and remediation guidance, alerts 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+1. CLI - use Access keys - must download or loose / then create new
+IAM role - what can/can't do
+2. AWS X-Ray - end to end view of requests as they travel through application - shows map of components
+3. AWS Code star - cloud-based service for creating, managing, and working with software development projects on AWS. You can quickly develop, build, and deploy applications on AWS with an AWS CodeStar project.
+4. 5 pillers of well architected framework
+	operational excellence
+	security
+	reliability
+	performance efficiency
+	cost optimization
+5. Security firewall - its for EC2 instance
+
+6. AWS Cloudtrail - service that enables governance compliance operational auditing,
+	log, monitor, retain account activity across infra
+	event history, detect 
+7. AWS Glue - ETL services
+8. AWS Cloudfront - make sure application to all in the world
+9. Amazon Cognito - for signup, signin and access control to web and mobile apps
